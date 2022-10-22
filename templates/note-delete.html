@@ -1,0 +1,17 @@
+{% extends 'base/base.html' %}
+
+{% block page_content %}
+       <!--headings-->
+        <h1>Delete Note</h1>
+        <!--headings-->
+
+        <!--note delete data form-->
+        <div class="form">
+            <form action="{% url 'delete note' note.pk %}" method="POST">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="Delete" />
+            </form>
+        </div>
+        <!--end note delete data form-->
+{% endblock %}

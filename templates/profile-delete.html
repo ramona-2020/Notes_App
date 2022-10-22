@@ -1,0 +1,17 @@
+{% extends 'base/base.html' %}
+
+{% block page_content %}
+       <!--headings-->
+        <h1>Delete Profile</h1>
+        <!--headings-->
+
+        <!--profile delete data form-->
+        <div class="form">
+            <form action="{% url 'profile delete' %}" method="POST">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="Delete" />
+            </form>
+        </div>
+        <!--end profile delete data form-->
+{% endblock %}
